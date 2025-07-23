@@ -17,12 +17,16 @@ private:
 
 	int GetPartialPoints(string& str1, string& str2) {
 		int gap = 0;
-		if (str1.length() > str2.length())
+		int smallerLength = 0;
+		if (str1.length() > str2.length()) {
 			gap = str1.length() - str2.length();
-		else
+			smallerLength = str2.length();
+		}
+		else {
 			gap = str2.length() - str1.length();
-
-		return (1 - (static_cast<double>(gap) / 3)) * 60;
+			smallerLength = str1.length();
+		}
+		return (1 - (static_cast<double>(gap) / smallerLength)) * 60;
 	}
 
 	const int MAX_POINT = 60;

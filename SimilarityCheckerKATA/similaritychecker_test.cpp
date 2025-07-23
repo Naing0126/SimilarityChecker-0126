@@ -13,6 +13,7 @@ TEST(LengthCheck, Zero) {
 TEST(LengthCheck, PartialPoint) {
 	LengthChecker sc;
 	EXPECT_EQ(20, sc.GetLengthPoint("AAABB", "BAA"));
+	EXPECT_EQ(30, sc.GetLengthPoint("AA", "AAE"));
 }
 int main() {
 	::testing::InitGoogleMock();
