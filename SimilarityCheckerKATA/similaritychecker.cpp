@@ -26,7 +26,7 @@ private:
 			gap = str2.length() - str1.length();
 			smallerLength = str1.length();
 		}
-		return (1 - (static_cast<double>(gap) / smallerLength)) * 60;
+		return (1 - (static_cast<double>(gap) / smallerLength)) * MAX_POINT;
 	}
 
 	const int MAX_POINT = 60;
